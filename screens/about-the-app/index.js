@@ -16,7 +16,8 @@ const AboutTheAppScreen = params => {
         <Image style={styles.threeDots} source={require("./assets/3Dots.png")} />
       </View>
       <View style={styles.textContainer}>
-        <Text style={styles.text}>{text1}</Text>
+        <Text style={styles.text}>test
+      </Text>
         <Text style={styles.text}>{text2}</Text>
       </View>
     </SafeAreaView>;
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "flex-start",
-    backgroundColor: "#fff"
+    backgroundColor: "#734444"
   },
   imgScroller: {
     flexDirection: "column",
@@ -41,10 +42,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20
   },
   text: {
-    fontSize: 14,
-    textAlign: "justify",
-    lineHeight: 18,
-    marginVertical: 10
+    fontSize: 20,
+    textAlign: "left",
+    lineHeight: 26,
+    marginVertical: 10,
+    flexDirection: "row",
+    flex: "1"
   }
 });
 export default AboutTheAppScreen;
