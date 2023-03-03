@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, View, SafeAreaView, Image } from "react-native";
+import { Text, StyleSheet, View, SafeAreaView, Image } from "react-native";
 
 const AboutTheAppScreen = params => {
   const [ImageSource, setImageSource] = useState();
@@ -12,10 +12,13 @@ const AboutTheAppScreen = params => {
   }, []);
   return <SafeAreaView style={styles.container}>
       <View style={styles.imgScroller}>
-        <Image source={ImageSource} style={styles.pjJkPGAV} />
+        <Image source={ImageSource} />
         <Image style={styles.threeDots} source={require("./assets/3Dots.png")} />
       </View>
-      
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>{text1}</Text>
+        <Text style={styles.text}>{text2}</Text>
+      </View>
     </SafeAreaView>;
 };
 
@@ -35,23 +38,13 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   textContainer: {
-    paddingHorizontal: 20,
-    width: 242,
-    height: 520
+    paddingHorizontal: 20
   },
   text: {
     fontSize: 14,
-    textAlign: "right",
+    textAlign: "justify",
     lineHeight: 18,
-    marginVertical: 10,
-    height: 240,
-    width: 202
-  },
-  pjJkPGAV: {
-    width: 200,
-    height: 100,
-    top: 0,
-    left: 0
+    marginVertical: 10
   }
 });
 export default AboutTheAppScreen;
